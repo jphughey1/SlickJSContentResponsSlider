@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Slick Slider</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Slick -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+    />
+
+    <!-- icons -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </head>
+  <body>
+    <div class="text-slider-wrapper">
+      <div class="text-slider">
+        <div class="text-slide">
+          <h1>
+            1953 Chevrolet Corvette <br />
+            Humble Beginnings.
+          </h1>
+        </div>
+        <div class="text-slide">
+          <h1>
+            1963 Chevrolet Corvette <br />
+            (RPO) Z06.
+          </h1>
+        </div>
+        <div class="text-slide">
+          <h1>
+            2005 Chevrolet Corvette <br />
+            6.0 liters. LS2.
+          </h1>
+        </div>
+        <div class="text-slide">
+          <h1>
+            2014 Chevrolet Corvette <br />
+            Lucky # C7s.
+          </h1>
+        </div>
+        <div class="text-slide">
+          <h1>
+            2020 Chevrolet Corvette <br />
+            8th Gen. Dubbed C8.
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-control">
+      <div class="prev">
+        <button type="button"><ion-icon name="arrow-back"></ion-icon></button>
+      </div>
+      <div class="next">
+        <button type="button">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="blocks">
+      <div class="block-1"></div>
+      <div class="block-2"></div>
+      <div class="block-3"></div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="image-slider">
+      <div
+        class="image-slide"
+        id="one"
+        style="background: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2-1953-chevrolet-corvette-assembly-02-1530628737.jpg?crop=1xw:1xh;center,top&resize=980:* ) no-repeat 50% 50%; background-size: cover;"
+        alt="1953corvette car"
+      ></div>
+      <div
+        class="image-slide"
+        id="two"
+        style="background: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1963-chevrolet-corvette-z06-1563812482.jpg?crop=1xw:1xh;center,top&resize=980:*) no-repeat 50% 50%; background-size: cover;"
+        alt="1963corvette car"
+      ></div>
+      <div
+        class="image-slide"
+        id="three"
+        style="background: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2009-chevrolet-corvette-1563811151.jpg?crop=1.00xw:0.916xh;0,0.0840xh&resize=768:*) no-repeat 50% 50%; background-size: cover;"
+        alt="2005corvette car"
+      ></div>
+      <div
+        class="image-slide"
+        id="four"
+        style="background: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/25-2014-chevrolet-corvette-117-1530628742.jpg?crop=1xw:1xh;center,top&resize=768:*) no-repeat 50% 50%; background-size: cover;"
+        alt="2014 Grey, Blue, and Red corvette cars"
+      ></div>
+      <div
+        class="image-slide"
+        id="five"
+        style="background: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2020-chevrolet-corvette-front-three-quarters-1563488441.jpg?crop=0.707xw:0.708xh;0.150xw,0.251xh&resize=768:*) no-repeat 50% 50%; background-size: cover;"
+        alt="2020 white corvette car"
+      ></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+    <script src="slick.js"></script>
+    <script>
+      var sickPrimary = {
+        autoplay: true,
+        autoplaySpeed: 3500,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        speed: 1800,
+        cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+        asNavFor: '.text-slider',
+        centerMode: true,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next')
+      };
+
+      var sickSecondary = {
+        autoplay: true,
+        autoplaySpeed: 3500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 1800,
+        cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+        asNavFor: '.image-slider',
+        prevArrow: $('.prev'),
+        nextArrow: $('.next')
+      };
+
+      $('.image-slider').slick(sickPrimary);
+      $('.text-slider').slick(sickSecondary);
+    </script>
+  </body>
+</html>
