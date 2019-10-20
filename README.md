@@ -1,0 +1,2 @@
+# SlickJSContentResponsSlider
+Content Responsive Slider
